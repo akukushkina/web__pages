@@ -9,7 +9,7 @@
   --main-second-color: #514040;
   --main-font-size: 18px;
   --main-font-weight: 400;
-  --title-color: 45px;
+  --title-font-size: 55px;
   --accent-color: #49ad09;
 }
 
@@ -19,6 +19,8 @@ body {
   color: var(--main-color);
   line-height: 1.5;
   font-weight: var(--main-font-weight);
+  background-color: #fff;
+  text-align: center;
 }
 
 a {
@@ -29,6 +31,18 @@ a {
   max-width: 1190px;
   padding: 0 10px;
   margin: 0 auto;
+}
+
+.title {
+font-size: var(--title-font-size);
+color: var(--main-color);
+margin-bottom: 80px;
+}
+
+.subtitle {
+    display: block;
+    color: var(--main-second-color);
+    margin-bottom: 30px;
 }
 
 .visibility-hidden {
@@ -178,6 +192,8 @@ a {
     bottom: -50px;
 }
 
+
+
 .about__content {
   max-width: 490px;
   margin: 0 auto;
@@ -251,4 +267,87 @@ a {
     position: absolute;
     top: 30px;
     right: 30px;
+}
+
+/* specialization */
+.specialization {
+    padding-bottom: 70px;
+}
+
+.clients__list {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 75px 0;
+margin-bottom: 140px;
+}
+.clients__item {
+    list-style: none;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 810px;
+    margin: 0 auto 80px;
+}
+
+.article {
+    max-width: 385px;
+    border: 1px solid #EDEDED;
+    border-radius: 5px;
+    padding: 30px 40px;
+    margin-right: 40px;
+    margin-bottom: 40px; 
+    transition: all .5s ease;
+}
+
+.article:hover {
+    border: 1px solid transparent;
+    box-shadow: 0px 100px 80px rgba(49, 49, 49, 0.1);
+}
+
+.article__title {
+    font-size: 22px;
+    padding-left: 45px;
+    margin-bottom: 30px;
+    position: relative;
+    
+}
+
+.article__title::before {
+    position: absolute; 
+    left: 0;
+    top: 0;
+}
+
+.article__title--1::before {
+    content: url(../images/icons/webflow.svg);
+}
+
+.article__title--2::before {
+    content: url(../images/icons/shopify.svg);
+}
+
+.article__title--3::before {
+    content: url(../images/icons/figma.svg);
+}
+
+.article__title--4::before {
+    content: url(../images/icons/php.svg);
+}
+
+.article__text {
+    color: var(--main-second-color);
+    margin-bottom: 30px;
+}
+
+.article__link {
+    display: block;
+    font-size: 16px;
+    color: var(--accent-color);
+    text-align: left;
+}
+
+.specialization__link {
 }
