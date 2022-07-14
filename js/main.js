@@ -13,3 +13,18 @@ video.addEventListener("click", () => {
 close.addEventListener("click", () => {
     play.classList.remove("active");
 })
+
+
+// portfolio examples
+
+const examples = document.querySelectorAll(".example");
+const load = document.querySelector(".portfolio__btn");
+let index = 3;
+
+load.addEventListener("click", () => {
+    examples.forEach((example) => {
+    example.classList.remove("hidden");
+});
+});
+
+
