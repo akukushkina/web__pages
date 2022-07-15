@@ -77,6 +77,7 @@ a {
   cursor: pointer;
 }
 
+
 /* header */
 .header {
   background-color: #f2f2f2;
@@ -137,6 +138,7 @@ a {
 .about__contact:hover,
 .specialization__link:hover,
 .portfolio__link:hover,
+.portfolio__btn:hover
 .example__link:hover,
 .contacts__btn:hover {
   opacity: 0.8;
@@ -733,4 +735,11 @@ transition: box-shadow .5s ease;
 
 .summary__btn:hover svg{
   fill: #fff;
+}
+
+/* footer */
+.footer__text {
+  padding: 40px 0;
+  border-top: 1px solid #EDEDED;
+  font-size: 16px;
 }
