@@ -51,7 +51,7 @@ function changeImage() {
         idx = reviews.length - 1;
     }
 
-    container.style.transform = `translateX(${-idx * 400}px)`;
+    container.style.transform = `translateX(${-idx * 395}px)`;
 }
 
 function resetInterval(){
