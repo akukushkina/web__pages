@@ -70,17 +70,26 @@ prev.addEventListener("click", () => {
   resetInterval();
 });
 
+
+// contact us
+
+
 // contacts form.
 
-const contactsBtn = document.querySelector(".contacts__btn");
+const contactsBtns = document.querySelectorAll(".contacts__btn");
 const contactsForm = document.querySelector(".form");
-const formClose = document.querySelector(".form__close")
+const formClose = document.querySelector(".form__close");
 
-contactsBtn.addEventListener("click", () => {
+contactsBtns.forEach(contactsBtn => {
+  contactsBtn.addEventListener("click", () => {
     contactsForm.classList.add('show');
   });
+})
 
   formClose.addEventListener("click", () => {
     contactsForm.classList.remove("show");
   });
+
+  
+
 

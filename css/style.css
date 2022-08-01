@@ -575,11 +575,12 @@ transition: box-shadow .5s ease;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
+  left:0;
+  top: 50%; 
+  transform: translateY(-50%);
   background-color: rgba(0, 0, 0, .9);
   opacity: 0;
   transition: opacity .5s ease;
@@ -655,11 +656,8 @@ transition: box-shadow .5s ease;
   fill: #fff;
 }
 
-.summary__list {
-}
 .summary__item {
   list-style: none;
-  
   transition: color .5s ease-in-out;
 }
 
@@ -722,7 +720,7 @@ transition: box-shadow .5s ease;
   border-radius: 50%;
   position: absolute;
   right: 10px;
-  top: 88px;
+  top: 83px;
 }
 
 .summary__btn svg{
