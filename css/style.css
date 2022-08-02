@@ -741,3 +741,13 @@ transition: box-shadow .5s ease;
   border-top: 1px solid #EDEDED;
   font-size: 16px;
 }
+
+/* animation */
+.animation {
+  transform: scale(0);
+  transition: transform .5s ease-in-out;
+}
+
+.animation.scale {
+  transform: scale(1);
+}

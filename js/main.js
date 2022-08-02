@@ -71,9 +71,6 @@ prev.addEventListener("click", () => {
 });
 
 
-// contact us
-
-
 // contacts form.
 
 const contactsBtns = document.querySelectorAll(".contacts__btn");
@@ -90,6 +87,23 @@ contactsBtns.forEach(contactsBtn => {
     contactsForm.classList.remove("show");
   });
 
-  
 
+  // animation
+
+const animations = document.querySelectorAll(".animation");
+
+const triggerBottom = (window.innerHeight / 4) * 5;
+
+window.addEventListener("scroll", checkAnimation);
+
+checkAnimation();
+
+function checkAnimation() {
+  animations.forEach((animation) => {
+    const animationTop = animation.getBoundingClientRect().top;
+    if(animationTop < triggerBottom) {
+      animation.classList.add("scale");
+    }
+  });
+}
 
