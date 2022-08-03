@@ -751,3 +751,54 @@ transition: box-shadow .5s ease;
 .animation.scale {
   transform: scale(1);
 }
+
+/* registration form */
+
+.registrarion,
+.login__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  padding: 50px;
+  display: none;
+  z-index: 10;
+}
+
+.registration__label,
+.login__label {
+  text-align: left;
+  padding: 10px;
+}
+
+.registration__label input,
+.login__label input {
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  outline: var(--accent-color);
+}
+
+.registration__label input::placeholder,
+.login__label input::placeholder {
+  font-style: 12px;
+  color: var(--main-second-color);
+}
+
+.registration__label:last-of-type,
+.login__label:last-of-type {
+  margin-bottom: 20px;
+}
+
+.registration__btn,
+.login__btn {
+  align-self: center;
+  margin-top: 20px;
+}

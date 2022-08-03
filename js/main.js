@@ -107,3 +107,21 @@ function checkAnimation() {
   });
 }
 
+// register form
+
+const registration = document.querySelector(".registrarion");
+const singUp = document.querySelector(".register");
+
+singUp.addEventListener("click", () => {
+  registration.style.display = "block";
+});
+
+
+// sing in form
+
+const login = document.querySelector(".login__form");
+const singIn = document.querySelector(".login");
+
+singIn.addEventListener("click", () => {
+  login.style.display = "block";
+})
