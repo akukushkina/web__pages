@@ -1,7 +1,6 @@
 // about video
 
 const video = document.querySelector(".about__video");
-const close = document.querySelector(".close");
 const play = document.querySelector(".video");
 
 video.addEventListener("click", () => {
@@ -10,10 +9,7 @@ video.addEventListener("click", () => {
   video.curentTime = 0;
 });
 
-close.addEventListener("click", () => {
-  play.classList.remove("active");
-  
-});
+play.addEventListener("click", close);
 
 // portfolio examples
 
@@ -75,17 +71,18 @@ prev.addEventListener("click", () => {
 
 const contactsBtns = document.querySelectorAll(".contacts__btn");
 const contactsForm = document.querySelector(".form");
-const formClose = document.querySelector(".form__close");
+
+function close(){
+  this.classList.remove("active")
+}
 
 contactsBtns.forEach(contactsBtn => {
   contactsBtn.addEventListener("click", () => {
-    contactsForm.classList.add('show');
+    contactsForm.classList.add('active');
   });
 })
 
-  formClose.addEventListener("click", () => {
-    contactsForm.classList.remove("show");
-  });
+  contactsForm.addEventListener("click", close);
 
 
   // animation
@@ -107,21 +104,5 @@ function checkAnimation() {
   });
 }
 
-// register form
-
-const registration = document.querySelector(".registrarion");
-const singUp = document.querySelector(".register");
-
-singUp.addEventListener("click", () => {
-  registration.style.display = "block";
-});
 
 
-// sing in form
-
-const login = document.querySelector(".login__form");
-const singIn = document.querySelector(".login");
-
-singIn.addEventListener("click", () => {
-  login.style.display = "block";
-})
