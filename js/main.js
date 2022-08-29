@@ -125,3 +125,25 @@ function scroll(){
     }
   }
 }
+
+
+//  registration form 
+const registration = document.querySelector('.registrarion');
+const registrarionBtn = document.querySelector('.register');
+
+registrarionBtn.addEventListener('click', ()=>{
+  registration.classList.add('active');
+})
+
+registration.addEventListener('click', close);
+
+
+// login form
+const logIn = document.querySelector('.login__form');
+const logInBtn = document.querySelector('.login');
+
+logInBtn.addEventListener('click', ()=> {
+  logIn.classList.add('active');
+})
+
+logIn.addEventListener('click', close);
