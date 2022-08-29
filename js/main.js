@@ -15,7 +15,6 @@ play.addEventListener("click", close);
 
 const examples = document.querySelectorAll(".example");
 const load = document.querySelector(".portfolio__btn");
-let index = 3;
 
 load.addEventListener("click", () => {
   examples.forEach((example) => {
@@ -105,4 +104,24 @@ function checkAnimation() {
 }
 
 
+// smooth scroll
 
+function scroll(){
+  if(document.querySelector(".menu__item")){
+    let links = document.querySelectorAll(".menu__link");
+
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        goScroll(document.querySelector(this.getAttribute("href")));
+      })
+    });
+
+    function goScroll(toBlock){
+
+      toBlock.scrollIntoView({
+        behavior: "smooth"
+      })
+    }
+  }
+}

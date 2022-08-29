@@ -21,6 +21,7 @@ body {
   font-weight: var(--main-font-weight);
   background-color: #fff;
   text-align: center;
+  overflow-x: hidden;
 }
 
 a {
