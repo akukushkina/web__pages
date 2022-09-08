@@ -45,7 +45,7 @@ function changeImage() {
     idx = reviews.length - 1;
   }
 
-  container.style.transform = `translateX(${-idx * 395}px)`;
+  container.style.transform = `translateX(${-idx * 615}px)`;
 }
 
 function resetInterval() {
@@ -147,3 +147,13 @@ logInBtn.addEventListener('click', ()=> {
 })
 
 logIn.addEventListener('click', close);
+
+// burger menu
+const burgerBtn = document.querySelector('.burger__menu');
+const menuList = document.querySelector('.menu__list');
+
+burgerBtn.addEventListener('click', ()=>{
+  menuList.classList.toggle('active');
+})
+
+menuList.addEventListener('click', close);
