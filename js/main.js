@@ -28,42 +28,56 @@ const container = document.querySelector(".reviews__slider");
 const reviews = document.querySelectorAll(".review");
 const prev = document.querySelector(".rewiews__prev");
 const next = document.querySelector(".rewiews__next");
+const wrapper = document.querySelector(".reviews");
+const media768 = window.matchMedia('(max-width: 768px)');
 
-let idx = 0;
+let index = 0;
 
-let interval = setInterval(run, 3000);
 
-function run() {
-  idx++;
-  changeImage();
+function changeImage(direction){
+
+  if(direction=="next"){
+     index++;
+      if(index==reviews.length){
+       index=0;
+      }
+  } 
+  else{
+          if(index==0){
+           index=reviews.length-1;
+          }
+          else{
+           index--;
+          }
+   }
+
+ for(i=0;i<reviews.length;i++){
+         reviews[i].classList.remove("active");
+ }
+
+ reviews[index].classList.add("active");     
+
 }
 
-function changeImage() {
-  if (idx > reviews.length - 1) {
-    idx = 0;
-  } else if (idx < 0) {
-    idx = reviews.length - 1;
-  }
-
-  container.style.transform = `translateX(${-idx * 615}px)`;
+next.onclick =  () => {
+  changeImage("next");
+}
+prev.onclick = () => {
+  changeImage("prev");
 }
 
-function resetInterval() {
-  clearInterval(interval);
-  interval = setInterval(run, 3000);
+function getMedia768 (){
+  if(media768.matches){
+    wrapper.style.width = '320px';
+    reviews.forEach(review => {
+      review.style.minWidth = '320px';
+    });
 }
+}
+ 
+media768.addEventListener('resize', getMedia768);
 
-next.addEventListener("click", () => {
-  idx++;
-  changeImage();
-  resetInterval();
-});
-
-prev.addEventListener("click", () => {
-  idx--;
-  changeImage();
-  resetInterval();
-});
+getMedia768(media768);
 
 
 // contacts form.
@@ -157,3 +171,4 @@ burgerBtn.addEventListener('click', ()=>{
 })
 
 menuList.addEventListener('click', close);
+
