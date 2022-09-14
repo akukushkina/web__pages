@@ -1062,4 +1062,8 @@ transition: box-shadow .5s ease;
   right: 6%;
   transform: translateX(-6%);
 }
+
+.form {
+  flex-direction: column;
+}
 }
